@@ -5,7 +5,7 @@
 
 body {
   background-color: #1e1d2e;
-  background-image: url('../img/bg.png');
+  /*background-image: url('../img/bg.png');*/
   color: #fff;
   font-family: var(--font-family-secondary);
 }
@@ -17,18 +17,15 @@ body:before {
   position: absolute;
   left: 0;
   top: 0;
-  /*background-image: url('../img/test.png');
-  background-position: right -200px;
-  background-size: contain;
-  background-repeat: no-repeat;*/
   background: var(--color-primary);
   content : '';
 }
 
 .container {
   width: 100%;
-  max-width: 780px;
+  max-width: 960px;
   margin: 200px auto 0;
+  padding: 0 15px;
   position: relative;
   z-index: 2;
 }

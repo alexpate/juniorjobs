@@ -11,13 +11,7 @@
 </head>
 <body>
   <div class="container">
-    <header class="Header">
-      <div class="Header-contain">
-        <h1 class="Header-title">JuniorJobs</h1>
-        <h2 class="Header-subtitle">Getting your first gig is tough work. To make it easier, here’s a list of some of the best entry-level jobs in the UK tech industry</h2>
-        <a href="" class="Button Button--primary AddNewButton">Add a new job</a>
-      </div>
-    </header>
+    {{> Header }}
     {{> Sort }}
 
     {{#each data.listings}}
@@ -32,6 +26,7 @@
     {{/each}}
 
     {{> Subscribe }}
+    {{> Footer }}
 
     <script src="./assets/app.js"></script>
 

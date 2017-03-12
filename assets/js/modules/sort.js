@@ -1,5 +1,7 @@
 let sortContainers = document.querySelectorAll('.Sort-select');
+let toggleFullName = document.getElementById('toggle-full-name');
 let listings = document.querySelectorAll('.Listing');
+let listingTitles = document.querySelectorAll('.Listing-title');
 
 let sortListings = function(ev) {
   let newValue = ev.target.value;
@@ -21,6 +23,14 @@ let sortListings = function(ev) {
   })
 }
 
+let minimalJobTitle = function(ev) {
+  listingTitles.forEach(function(listingTitle) {
+    listingTitle.innerHTML = listingTitle.innerHTML.replace(/Junior/g, '').replace(/Graduate/g, '');
+  })
+}
+
 sortContainers.forEach(function(el) {
   el.addEventListener('change', (ev) => sortListings(ev), false);
 })
+
+toggleFullName.addEventListener('click', (ev) => minimalJobTitle(ev), false);

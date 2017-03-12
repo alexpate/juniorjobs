@@ -1,10 +1,17 @@
+:root {
+  --toggle-bg: #303044;
+  --toggle-checked: #04b3ff;
+  --toggle-height: 18px;
+  --toggle-width: 40px;
+}
+
 .Sort {
   width: 100%;
   height: 38px;
   border-width: var(--border-width);
   border-style: solid;
-  border-color: #974dff;
-  border-image: linear-gradient(to right, #974dff, #04b3ff) 1;
+  border-color: var(--color-primary);
+  border-image: linear-gradient(to right, var(--color-primary), var(--color-secondary)) 1;
   margin: var(--spacing-y) 0;
   display: flex;
   align-items: center;
@@ -19,17 +26,17 @@
 
 .Sort-part--one {
   border-right-color: #686Cff;
-  width: 35%;
+  width: 25%;
 }
 
 .Sort-part--two {
   border-right-color: #1487ff;
-  width: 35%;
+  width: 25%;
 }
 
 .Sort-part--three {
   border-right: 0;
-  width: 30%;
+  width: 50%;
 }
 
 .Sort-select {
@@ -50,8 +57,64 @@
   border: 0;
 }
 
-.Sort-meta {
+.Sort-fullname {
   color: #868695;
-  font-size: 14px;
+  font-size: 12px;
   font-family: var(--font-family-primary);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Sort-toggle,
+.Sort-toggle:active {
+  position: absolute;
+  top: -5000px;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  border: none;
+  outline: none;
+}
+
+.Sort-toggle-label {
+  display: block;
+  position: relative;
+  margin-left: 10px;
+  width: var(--toggle-width);
+  height: var(--toggle-height);
+  border-radius: 18px;
+  background: var(--toggle-bg);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.Sort-toggle-label:before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  line-height: var(--toggle-height);
+  text-indent: calc(var(--toggle-height) + 5px);
+  height: var(--toggle-height);
+  width: var(--toggle-height);
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+  right: auto;
+  background: #fff;
+  transition: all 200ms ease-in-out;
+}
+
+.Sort-toggle:checked + .Sort-toggle-label {
+  box-shadow: inset 0 0 0 20px var(--toggle-checked);
+}
+
+.Sort-toggle:checked + .Sort-toggle-label:before {
+  left: calc(100% - var(--toggle-height));
+  box-shadow: 0 0 0 2px transparent,0 3px 3px rgba(0,0,0,.3);
+}
+
+.Sort-toggle:checked + .Sort-toggle-label:after {
+  color: rgba(19,191,17,1);
 }
