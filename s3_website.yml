@@ -1,0 +1,26 @@
+s3_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+s3_secret: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+s3_bucket: <%= ENV['AWS_S3_PRODUCTION_BUCKET'] %>
+
+s3_endpoint: eu-west-2
+
+index_document: index.html
+# error_document: error.html
+
+index_document: index.html
+error_document: 404/index.html
+
+max_age:
+  "assets/*": 2628000
+  "*": 300
+
+cache_control: public, no-transform, max-age=2628000, s-maxage=2628000
+
+gzip: true
+gzip:
+  - .html
+  - .css
+  - .js
+
+cloudfront_distribution_id: <%= ENV['AWS_CLOUDFRONT_DISTRIBUTION_ID'] %>
+cloudfront_wildcard_invalidation: true
