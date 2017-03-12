@@ -1,16 +1,33 @@
 .Listing {
   width: 100%;
   padding: 15px 0;
-  margin: 10px 0;
+  margin: var(--spacing-y) 0;
   /*border-left-width: 1px;
   border-left-style: solid;*/
   /*border-bottom: 1px solid rgba*/
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.Listing:hover {
+  background-color: rgba(255, 255, 255, .01);
+}
+
+.Listing:hover .Listing-link {
+  color: var(--color-secondary);
 }
 
 .Listing > div {
   flex-grow: 1;
+}
+
+.Listing-image {
+  margin-right: var(--spacing-x);
+  border-radius: 3px;
+  width: 43px;
+  height: 43px;
 }
 
 .Listing-title,

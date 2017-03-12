@@ -5,16 +5,34 @@
 
 body {
   background-color: #1e1d2e;
-  /*background-image: url('../img/bg.svg');*/
-  background-position: center top;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image: url('../img/bg.png');
   color: #fff;
   font-family: var(--font-family-secondary);
+}
+
+body:before {
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /*background-image: url('../img/test.png');
+  background-position: right -200px;
+  background-size: contain;
+  background-repeat: no-repeat;*/
+  background: var(--color-primary);
+  content : '';
 }
 
 .container {
   width: 100%;
   max-width: 780px;
   margin: 200px auto 0;
+  position: relative;
+  z-index: 2;
+}
+
+.AddNewButton {
+  margin: var(--spacing-y) 0 0;
 }

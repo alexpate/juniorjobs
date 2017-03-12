@@ -1,5 +1,7 @@
 h1,
-h2 {
+h2,
+h3,
+h4 {
   margin: 0;
   padding: 0;
 }
@@ -7,7 +9,7 @@ h2 {
 h1 {
   font-family: var(--font-family-primary);
   font-size: 36px;
-  font-weight: 300;
+  font-weight: 600;
   margin: 0 0 10px 0;
 }
 
@@ -17,4 +19,14 @@ h2 {
   font-weight: 300;
   opacity: 0.6;
   line-height: 1.4em;
+}
+
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+p {
+  color: var(--color-copy);
 }

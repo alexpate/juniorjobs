@@ -1,0 +1,48 @@
+.Input {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  height: 40px;
+  padding: 0 20px;
+  font-family: var(--font-family-primary);
+  color: rgba(255, 255, 255, .8);
+}
+
+.Input:focus {
+  border: 1px solid #04b3ff;
+  border-right: 0;
+  outline: 0;
+}
+
+.Button {
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: currentColor;
+  height: 40px;
+  font-family: var(--font-family-primary);
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.Button--primary {
+  color: var(--color-primary);
+}
+
+.Button--primary:hover {
+  background-color: var(--color-primary);
+  border-color: transparent;
+  color: #fff;
+}
+
+.Button--secondary {
+  color: var(--color-secondary);
+}
+
+.Button--secondary:hover {
+  background-color: var(--color-secondary);
+  border-color: transparent;
+  color: #fff;
+}

@@ -3,6 +3,17 @@
   padding: 20px 0;
 }
 
-.Header-half {
-  max-width: 50%;
+.Header-contain {
+  max-width: 80%;
+}
+
+.Header-title {
+  background-image: url('../img/logo.svg');
+  width: 183px;
+  height: 28px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
 }
