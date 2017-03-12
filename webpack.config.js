@@ -10,6 +10,10 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.(png|jpg|svg)$/,
+        loader: 'file-loader'
+      },
+      {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -20,6 +24,14 @@ module.exports = {
           }]
         })
       },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['env']
+        }
+      }
     ],
   },
   output: {
