@@ -8,10 +8,10 @@ const handlebars = require('handlebars');
 const data = require('metalsmith-data');
 
 const _meta = {
-  title: 'First Tech Jobs',
+  title: 'JuniorJobs - Entry-level jobs in the UK tech industry',
   description: '',
   generator: 'Metalsmith',
-  url: 'https://jobs.alexpate.uk'
+  url: 'https://juniorjobs.io'
 };
 
 Metalsmith(__dirname)
