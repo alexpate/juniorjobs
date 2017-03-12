@@ -2,30 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="./favicon.png" />
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
   <link href="./assets/site.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:600,400,300" rel="stylesheet">
+
 </head>
 <body>
   <div class="container">
     <header class="Header">
-      <div class="Header-half">
-        <h1 class="Header-title">Init(Career)</h1>
+      <div class="Header-contain">
+        <h1 class="Header-title">JuniorJobs</h1>
         <h2 class="Header-subtitle">Getting your first gig is tough work. To make it easier, here’s a list of some of the best entry-level jobs in the UK tech industry</h2>
+        <a href="" class="Button Button--primary AddNewButton">Add a new job</a>
       </div>
     </header>
     {{> Sort }}
 
     {{#each data.listings}}
-      <section class="Listing" data-location="{{location}}" data-category="{{category}}">
+      <a href="{{url}}" class="Listing" data-location="{{location}}" data-category="{{category}}">
+        <img class="Listing-image" src="{{logo}}">
         <div>
           <h3 class="Listing-title">{{title}}</h3>
           <h4 class="Listing-sub">{{company}} - {{location}}</h4>
         </div>
-        <a href="{{url}}" class="Listing-link">Apply now</a>
-      </section>
+        <span class="Listing-link">Apply now</span>
+      </a>
     {{/each}}
+
+    {{> Subscribe }}
 
     <script src="./assets/app.js"></script>
 
