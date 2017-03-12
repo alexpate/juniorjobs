@@ -17,7 +17,15 @@
     </header>
     {{> Sort }}
 
-    {{{ contents }}}
+    {{#each data.listings}}
+      <section class="Listing" data-location="{{location}}" data-category="{{category}}">
+        <div>
+          <h3 class="Listing-title">{{title}}</h3>
+          <h4 class="Listing-sub">{{company}} - {{location}}</h4>
+        </div>
+        <a href="{{url}}" class="Listing-link">Apply now</a>
+      </section>
+    {{/each}}
 
     <script src="./assets/app.js"></script>
 

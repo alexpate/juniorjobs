@@ -3,6 +3,9 @@ const markdown = require('metalsmith-markdown');
 const layouts = require('metalsmith-layouts');
 const permalinks = require('metalsmith-permalinks');
 const htmlMinifier = require('metalsmith-html-minifier');
+const collections = require('metalsmith-collections');
+const handlebars = require('handlebars');
+const data = require('metalsmith-data');
 
 const _meta = {
   title: 'First Tech Jobs',
@@ -17,15 +20,17 @@ Metalsmith(__dirname)
   .destination('./build')
   .clean(false)
   .use(permalinks())
+  .use(data({
+    listings: './data/listings.json',
+  }))
   .use(layouts({
     engine: 'handlebars',
     partials: 'partials',
-    partialExtension: '.html'
   }))
-  .use(htmlMinifier("*.html", {
-    removeComments: true,
-    processScripts: ['application/ld+json']
-  }))
+  // .use(htmlMinifier("*.html", {
+  //   removeComments: true,
+  //   processScripts: ['application/ld+json']
+  // }))
   .build(function(err, files) {
     if (err) { throw err; }
   });
