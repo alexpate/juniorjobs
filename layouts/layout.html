@@ -4,22 +4,17 @@
   <meta charset="UTF-8" />
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
+  <link href="./assets/site.css" rel="stylesheet">
   {{> head }}
 </head>
 <body>
-  <header>
-    <p>
-      <a href="/">Home</a>
-    </p>
-  </header>
-  <h1>{{ title }}</h1>
-  <p>{{ description }}</p>
+  <div class="container">
+    <header class="Header">
+      <h1>The best entry-level jobs in the UK tech industry</h1>
+    </header>
+    {{> Sort }}
 
-  {{{ contents }}}
-
-  <footer>
-    <p>Generated with {{ generator }} &mdash; <a href="{{ url }}">{{ url }}</a></p>
-  </footer>
-
+    {{{ contents }}}
+  </div>
 </body>
 </html>
