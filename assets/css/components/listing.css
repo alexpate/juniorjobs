@@ -1,20 +1,54 @@
 .Listing {
   width: 100%;
-  padding: 20px 0;
+  padding: 15px 0;
+  margin: 10px 0;
+  /*border-left-width: 1px;
+  border-left-style: solid;*/
+  /*border-bottom: 1px solid rgba*/
+  display: flex;
+  align-items: center;
+}
+
+.Listing > div {
+  flex-grow: 1;
 }
 
 .Listing-title,
 .Listing-sub {
   margin: 0;
   padding: 0;
+  font-family: var(--font-family-secondary);
 }
 
 .Listing-title {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.3em;
 }
 
 .Listing-sub {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
+  opacity: .4;
+  font-family: var(--font-family-primary);
+}
+
+.Listing-link {
+  text-align: right;
+  color: rgba(255, 255, 255, .3);
+  font-size: 16px;
+  text-decoration: none;
+  flex-grow: none;
+}
+
+.Listing.is-hidden {
+  display: none;
+}
+
+.Listing[data-category="design"] {
+  border-left-color: #5046D8;
+}
+
+.Listing[data-category="development"] {
+  border-left-color: #1487ff;
 }

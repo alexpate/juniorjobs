@@ -5,11 +5,16 @@
 
 body {
   background-color: #1e1d2e;
+  /*background-image: url('../img/bg.svg');*/
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
   color: #fff;
+  font-family: var(--font-family-secondary);
 }
 
 .container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 780px;
+  margin: 200px auto 0;
 }

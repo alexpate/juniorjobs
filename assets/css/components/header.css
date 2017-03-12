@@ -1,0 +1,8 @@
+.Header {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.Header-half {
+  max-width: 50%;
+}

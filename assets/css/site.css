@@ -5,3 +5,5 @@
 @import 'components/site';
 @import 'components/typography';
 @import 'components/sort';
+@import 'components/header';
+@import 'components/listing';
