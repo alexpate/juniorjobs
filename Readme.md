@@ -1,6 +1,17 @@
+# Junior Jobs 🤘🤖⚡️
 
-# static-site
+A selection of junior/graduate level jobs in the UK tech industry.
 
-This example uses Metalsmith to make a static site. To test it out yourself just run:
+## Contributing
 
-    $ make build
+If you or a company you know is hiring, feel free to create a new issue containing the following information:
+
+```
+Title: UX Designer
+Company: BBC
+Location: Manchester
+category: design
+url: A link to the application page
+```
+
+The board is updated daily.
