@@ -1,0 +1,20 @@
+.Listing {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.Listing-title,
+.Listing-sub {
+  margin: 0;
+  padding: 0;
+}
+
+.Listing-title {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.Listing-sub {
+  font-size: 16px;
+  font-weight: 400;
+}
