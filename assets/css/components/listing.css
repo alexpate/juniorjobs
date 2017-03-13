@@ -5,18 +5,28 @@
   /*border-left-width: 1px;
   border-left-style: solid;*/
   /*border-bottom: 1px solid rgba*/
-  display: flex;
-  align-items: center;
+  display: block;
   text-decoration: none;
   color: #fff;
 }
 
-/*.Listing:hover {
-  background-color: rgba(255, 255, 255, .01);
-}*/
+@media screen and (min-width: 40em) {
+  .Listing {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+}
 
 .Listing > div {
-  flex-grow: 1;
+  padding-left: 60px;
+}
+
+@media screen and (min-width: 40em) {
+  .Listing > div {
+    flex-grow: 1;
+    padding-left: 0;
+  }
 }
 
 .Listing-image {
@@ -24,6 +34,13 @@
   border-radius: 3px;
   width: 43px;
   height: 43px;
+  float: left;
+}
+
+@media screen and (min-width: 40em) {
+  .Listing-image {
+    float: none;
+  }
 }
 
 .Listing-title,
@@ -52,6 +69,13 @@
   font-size: 16px;
   text-decoration: none;
   flex-grow: none;
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  .Listing-link {
+    display: inline;
+  }
 }
 
 .Listing:hover .Listing-link {

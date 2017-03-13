@@ -48,7 +48,7 @@
   background-position: right center;
   background-repeat: no-repeat;
   border: 0;
-  color: #974dff;
+  color: var(--color-primary);
   font-family: var(--font-family-primary);
 }
 
@@ -68,13 +68,7 @@
 
 .Sort-toggle,
 .Sort-toggle:active {
-  position: absolute;
-  top: -5000px;
-  height: 0;
-  width: 0;
-  opacity: 0;
-  border: none;
-  outline: none;
+  display: none;
 }
 
 .Sort-toggle-label {

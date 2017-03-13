@@ -3,8 +3,10 @@
   padding: 20px 0;
 }
 
-.Header-contain {
-  max-width: 60%;
+@media screen and (min-width: 40em) {
+  .Header-contain {
+    max-width: 60%;
+  }
 }
 
 .Header-title {

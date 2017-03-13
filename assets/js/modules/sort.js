@@ -24,9 +24,16 @@ let sortListings = function(ev) {
 }
 
 let minimalJobTitle = function(ev) {
-  listingTitles.forEach(function(listingTitle) {
-    listingTitle.innerHTML = listingTitle.innerHTML.replace(/Junior/g, '').replace(/Graduate/g, '');
-  })
+  if (ev.target.checked) {
+    listings.forEach(function(listing) {
+      let listingTitle = listing.querySelector('.Listing-title');
+      listingTitle.innerHTML = listing.getAttribute('data-title');
+    })
+  } else {
+    listingTitles.forEach(function(listingTitle) {
+      listingTitle.innerHTML = listingTitle.innerHTML.replace(/Junior/g, '').replace(/Graduate/g, '');
+    })
+  }
 }
 
 sortContainers.forEach(function(el) {

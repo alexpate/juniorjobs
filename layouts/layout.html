@@ -5,6 +5,7 @@
   <link rel="icon" type="image/png" href="./favicon.png" />
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="./assets/site.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:600,400,300" rel="stylesheet">
 
@@ -15,7 +16,7 @@
     {{> Sort }}
 
     {{#each data.listings}}
-      <a href="{{url}}" class="Listing" data-location="{{location}}" data-category="{{category}}">
+      <a href="{{url}}" class="Listing" data-location="{{location}}" data-category="{{category}}" data-title="{{title}}">
         <img class="Listing-image" src="{{logo}}">
         <div>
           <h3 class="Listing-title">{{title}}</h3>
