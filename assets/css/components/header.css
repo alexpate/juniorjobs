@@ -11,11 +11,18 @@
 
 .Header-title {
   background-image: url('../img/logo.svg');
-  width: 183px;
-  height: 28px;
+  width: 130px;
+  height: 20px;
   background-size: cover;
   background-repeat: no-repeat;
   white-space: nowrap;
   text-indent: 100%;
   overflow: hidden;
+}
+
+@media screen and (min-width: 40em) {
+  .Header-title {
+    width: 183px;
+    height: 28px;
+  }
 }

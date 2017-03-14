@@ -64,6 +64,12 @@
   .Sort-part--two {
     border-right-color: #1487ff;
   }
+
+  .Sort-part--three {
+    margin-top: 0;
+    border-top: 0;
+    justify-content: flex-end;
+  }
 }
 
 .Sort-select {

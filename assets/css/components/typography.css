@@ -1,7 +1,8 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+p {
   margin: 0;
   padding: 0;
 }
@@ -21,18 +22,27 @@ h1 {
 
 h2 {
   font-family: var(--font-family-secondary);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
   color: #868695;
   line-height: 1.4em;
 }
 
+@media screen and (min-width: 40em) {
+  h2 {
+    font-size: 20px;
+  }
+}
 
 h4 {
-  font-size: 20px;
+  font-size: 18px;
+  margin-bottom: 5px;
   font-weight: 400;
 }
 
 p {
   color: var(--color-copy);
+  font-size: 14px;
+  line-height: 1.4em;
+  margin-bottom: 20px;
 }
