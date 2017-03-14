@@ -7,15 +7,34 @@
 }
 
 .Subscribe-form {
-  display: flex;
-  flex: 1 0;
+  position: relative;
+}
+
+@media screen and (min-width: 40em) {
+  .Subscribe-form {
+    display: flex;
+    flex: 1 0;
+  }
 }
 
 .Subscribe-input {
-  border-right: 0;
-  flex: 1 0 0;
+  width: 100%;
+  border-bottom: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .Subscribe-input {
+    border-right: 0;
+    flex: 1 0 0;
+  }
 }
 
 .Subscribe-button {
-  min-width: 220px;
+  width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .Subscribe-button {
+    min-width: 220px;
+  }
 }

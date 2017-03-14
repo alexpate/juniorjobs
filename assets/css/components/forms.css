@@ -14,10 +14,7 @@
 }
 
 .Button {
-  background: transparent;
-  border-width: 1px;
-  border-style: solid;
-  border-color: currentColor;
+  border: 0;
   height: 40px;
   font-family: var(--font-family-primary);
   display: inline-block;
@@ -28,21 +25,19 @@
 }
 
 .Button--primary {
-  color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: #fff;
 }
 
 .Button--primary:hover {
   background-color: var(--color-primary);
-  border-color: transparent;
-  color: #fff;
 }
 
 .Button--secondary {
-  color: var(--color-secondary);
+  background-color: var(--color-secondary);
+  color: #fff;
 }
 
 .Button--secondary:hover {
-  background-color: var(--color-secondary);
-  border-color: transparent;
   color: #fff;
 }

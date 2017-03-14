@@ -1,10 +1,7 @@
 .Listing {
   width: 100%;
   padding: 15px 0;
-  margin: var(--spacing-y) 0;
-  /*border-left-width: 1px;
-  border-left-style: solid;*/
-  /*border-bottom: 1px solid rgba*/
+  margin: calc(var(--spacing-y) / 2) 0;
   display: block;
   text-decoration: none;
   color: #fff;
@@ -15,11 +12,12 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+    margin: var(--spacing-y) 0;
   }
 }
 
 .Listing > div {
-  padding-left: 60px;
+  padding-left: 40px;
 }
 
 @media screen and (min-width: 40em) {
@@ -30,16 +28,19 @@
 }
 
 .Listing-image {
-  margin-right: var(--spacing-x);
+  margin-right: calc(var(--spacing-x) / 2);
   border-radius: 3px;
-  width: 43px;
-  height: 43px;
+  width: 33px;
+  height: 33px;
   float: left;
 }
 
 @media screen and (min-width: 40em) {
   .Listing-image {
     float: none;
+    width: 43px;
+    height: 43px;
+    margin-right: var(--spacing-x);
   }
 }
 
@@ -51,16 +52,29 @@
 }
 
 .Listing-title {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.3em;
 }
 
+@media screen and (min-width: 40em) {
+  .Listing-title {
+    font-size: 24px;
+    line-height: 1.3em;
+  }
+}
+
 .Listing-sub {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
   opacity: .4;
   font-family: var(--font-family-primary);
+}
+
+@media screen and (min-width: 40em) {
+  .Listing-sub {
+    font-size: 15px;
+  }
 }
 
 .Listing-link {
@@ -102,12 +116,4 @@
 
 .Listing.is-hidden {
   display: none;
-}
-
-.Listing[data-category="design"] {
-  border-left-color: #5046D8;
-}
-
-.Listing[data-category="development"] {
-  border-left-color: #1487ff;
 }

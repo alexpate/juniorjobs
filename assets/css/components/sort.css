@@ -7,15 +7,21 @@
 
 .Sort {
   width: 100%;
-  height: 38px;
+  height: auto;
   border-width: var(--border-width);
   border-style: solid;
   border-color: var(--color-primary);
-  border-image: linear-gradient(to right, var(--color-primary), var(--color-secondary)) 1;
+  /*border-image: linear-gradient(to right, var(--color-primary), var(--color-secondary)) 1;*/
   margin: var(--spacing-y) 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+}
+
+@media screen and (min-width: 40em) {
+  .Sort {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .Sort-part {
@@ -24,27 +30,49 @@
   padding: 0 var(--spacing-y);
 }
 
+.Sort-part--one,
+.Sort-part--two {
+  width: 50%;
+  float: left;
+}
+
 .Sort-part--one {
-  border-right-color: #686Cff;
-  width: 25%;
+  border-right-color: var(--color-primary);
 }
 
 .Sort-part--two {
-  border-right-color: #1487ff;
-  width: 25%;
+  border-right-color: transparent;
 }
 
 .Sort-part--three {
   border-right: 0;
-  width: 50%;
+  width: 100%;
+  margin-top: 38px;
+  height: 34px;
+  border-top: 1px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 40em) {
+  .Sort-part--one,
+  .Sort-part--two {
+    width: 25%;
+  }
+
+  .Sort-part--two {
+    border-right-color: #1487ff;
+  }
 }
 
 .Sort-select {
   appearance: none;
   width: 100%;
   height: 38px;
+  font-size: 14px;
   background-color: transparent;
-  background-image: url('../img/arrow_down.svg');
+  background-image: url('../img/chevron_down.svg');
   background-position: right center;
   background-repeat: no-repeat;
   border: 0;
@@ -63,7 +91,13 @@
   font-family: var(--font-family-primary);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+}
+
+@media screen and (min-width: 40em) {
+  .Sort-fullname {
+    justify-content: flex-end;
+  }
 }
 
 .Sort-toggle,
