@@ -23,15 +23,15 @@ body:before {
 .container {
   width: 100%;
   max-width: 960px;
-  margin: 50px auto 0;
-  padding: 0 15px;
+  margin: 0 auto;
+  padding: 50px 15px 0;
   position: relative;
   z-index: 2;
 }
 
 @media screen and (min-width: 40em) {
   .container {
-    margin: 200px auto 0;
+    padding-top: 200px;
   }
 }
 .AddNewButton {

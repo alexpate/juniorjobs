@@ -41,3 +41,21 @@ sortContainers.forEach(function(el) {
 })
 
 toggleFullName.addEventListener('click', (ev) => minimalJobTitle(ev), false);
+
+
+const sortContainer = document.querySelector('.Sort');
+let sortOffset = sortContainer.offsetTop;
+let sortHeight = sortContainer.clientHeight;
+let windowHeight = window.innerHeight;
+let scrollY;
+
+window.addEventListener('scroll', function() {
+  scrollY = window.scrollY;
+
+  if (scrollY > sortOffset) {
+    console.log('Out of top');
+    sortContainer.classList.add('is-fixed');
+  } else {
+    sortContainer.classList.remove('is-fixed');
+  }
+});

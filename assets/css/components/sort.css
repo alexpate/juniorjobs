@@ -5,13 +5,35 @@
   --toggle-width: 40px;
 }
 
+.Sort-shim {
+  height: 92px;
+  margin: var(--spacing-y) 0;
+}
+
+@media screen and (min-width: 40em) {
+  .Sort-shim {
+    height: 46px;
+  }
+}
+
 .Sort {
   width: 100%;
   height: auto;
-  margin: var(--spacing-y) 0;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 0 13px 0 #c5c9da;
+}
+
+.Sort.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  width: 100%;
+  max-width: 930px;
+  margin-top: 0;
+  border-radius: 0 0 4px 4px;
 }
 
 @media screen and (min-width: 40em) {
