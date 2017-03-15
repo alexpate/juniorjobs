@@ -1,6 +1,10 @@
 .Header {
   width: 100%;
-  padding: 20px 0;
+  padding: 60px 0 20px;
+  background: url('../img/drop.png') no-repeat right bottom / contain;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 @media screen and (min-width: 40em) {

@@ -1,10 +1,10 @@
 .Input {
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--color-primary);
   height: 40px;
   padding: 0 20px;
   font-family: var(--font-family-primary);
-  color: rgba(255, 255, 255, .8);
+  color: var(--color-primary);
 }
 
 .Input:focus {
@@ -21,7 +21,12 @@
   text-decoration: none;
   padding: 10px 20px;
   cursor: pointer;
+  box-shadow: none;
   transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.Button:hover {
+  box-shadow: 0 0 13px 0 #c5c9da;
 }
 
 .Button--primary {

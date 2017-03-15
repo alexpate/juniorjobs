@@ -1,7 +1,7 @@
 .Subscribe {
   margin: var(--spacing-y) 0;
   padding: var(--spacing-y);
-  border-color: var(--color-secondary);
+  border-color: var(--color-primary);
   border-style: solid;
   border-width: var(--border-width);
 }

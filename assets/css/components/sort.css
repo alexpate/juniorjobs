@@ -8,16 +8,15 @@
 .Sort {
   width: 100%;
   height: auto;
-  border-width: var(--border-width);
-  border-style: solid;
-  border-color: var(--color-primary);
-  /*border-image: linear-gradient(to right, var(--color-primary), var(--color-secondary)) 1;*/
   margin: var(--spacing-y) 0;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 13px 0 #c5c9da;
 }
 
 @media screen and (min-width: 40em) {
   .Sort {
-    height: 38px;
+    height: 46px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,7 +36,7 @@
 }
 
 .Sort-part--one {
-  border-right-color: var(--color-primary);
+  border-right-color: #d3d7e4;
 }
 
 .Sort-part--two {
@@ -48,8 +47,8 @@
   border-right: 0;
   width: 100%;
   margin-top: 38px;
-  height: 34px;
-  border-top: 1px solid var(--color-primary);
+  height: 46px;
+  border-top: 1px solid #d3d7e4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,7 +61,7 @@
   }
 
   .Sort-part--two {
-    border-right-color: #1487ff;
+    border-right-color: #d3d7e4;
   }
 
   .Sort-part--three {
@@ -75,7 +74,7 @@
 .Sort-select {
   appearance: none;
   width: 100%;
-  height: 38px;
+  height: 46px;
   font-size: 14px;
   background-color: transparent;
   background-image: url('../img/chevron_down.svg');

@@ -4,7 +4,7 @@
   margin: calc(var(--spacing-y) / 2) 0;
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: var(--color-copy);
 }
 
 @media screen and (min-width: 40em) {
@@ -79,7 +79,7 @@
 
 .Listing-link {
   text-align: right;
-  color: rgba(255, 255, 255, .3);
+  color: var(--color-copy);
   font-size: 16px;
   text-decoration: none;
   flex-grow: none;

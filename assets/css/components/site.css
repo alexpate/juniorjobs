@@ -4,9 +4,8 @@
 }
 
 body {
-  background-color: #1e1d2e;
-  /*background-image: url('../img/bg.png');*/
-  color: #fff;
+  background-color: #edeef6;
+  color: var(--color-copy);
   font-family: var(--font-family-secondary);
 }
 
