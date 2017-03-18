@@ -1,13 +1,15 @@
 .Header {
   width: 100%;
   padding: 60px 0 20px;
-  background: url('../img/drop.png') no-repeat right bottom / contain;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  /*background: url('../img/drop.png') no-repeat right bottom / contain;*/
 }
 
 @media screen and (min-width: 40em) {
+  .Header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
   .Header-contain {
     max-width: 60%;
   }

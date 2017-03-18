@@ -4,7 +4,7 @@
   margin: calc(var(--spacing-y) / 2) 0;
   display: block;
   text-decoration: none;
-  color: var(--color-copy);
+  color:#eceff5;
 }
 
 @media screen and (min-width: 40em) {
@@ -33,6 +33,7 @@
   width: 33px;
   height: 33px;
   float: left;
+  background-color: #fff;
 }
 
 @media screen and (min-width: 40em) {
@@ -93,7 +94,7 @@
 }
 
 .Listing:hover .Listing-link {
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .Listing-link:after {

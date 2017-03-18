@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #edeef6;
+  background-color: var(--color-bg);
   color: var(--color-copy);
   font-family: var(--font-family-secondary);
 }

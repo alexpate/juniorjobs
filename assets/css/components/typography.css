@@ -24,7 +24,7 @@ h2 {
   font-family: var(--font-family-secondary);
   font-size: 16px;
   font-weight: 300;
-  color: #868695;
+  color: var(--color-copy);
   line-height: 1.4em;
 }
 

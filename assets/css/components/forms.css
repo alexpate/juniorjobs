@@ -26,7 +26,7 @@
 }
 
 .Button:hover {
-  box-shadow: 0 0 13px 0 #c5c9da;
+  box-shadow: 0 0 13px 0 black;
 }
 
 .Button--primary {

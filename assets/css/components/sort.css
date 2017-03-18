@@ -1,6 +1,6 @@
 :root {
   --toggle-bg: #303044;
-  --toggle-checked: #04b3ff;
+  --toggle-checked: #27c8d2;
   --toggle-height: 18px;
   --toggle-width: 40px;
 }
@@ -19,21 +19,21 @@
 .Sort {
   width: 100%;
   height: auto;
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 0 13px 0 #c5c9da;
+  background-color: var(--color-bg);
+  /*border-radius: 4px;*/
+  /*box-shadow: 0 0 13px 0 #c5c9da;*/
+  border: 1px solid var(--color-primary);
 }
 
 .Sort.is-fixed {
   position: fixed;
-  top: 0;
+  top: -1px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 99;
   width: 100%;
   max-width: 930px;
   margin-top: 0;
-  border-radius: 0 0 4px 4px;
 }
 
 @media screen and (min-width: 40em) {
@@ -58,7 +58,7 @@
 }
 
 .Sort-part--one {
-  border-right-color: #d3d7e4;
+  border-right-color: var(--color-primary);
 }
 
 .Sort-part--two {
@@ -70,7 +70,7 @@
   width: 100%;
   margin-top: 38px;
   height: 46px;
-  border-top: 1px solid #d3d7e4;
+  border-top: 1px solid var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +83,7 @@
   }
 
   .Sort-part--two {
-    border-right-color: #d3d7e4;
+    border-right-color: var(--color-primary);
   }
 
   .Sort-part--three {

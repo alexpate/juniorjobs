@@ -3,22 +3,31 @@ let toggleFullName = document.getElementById('toggle-full-name');
 let listings = document.querySelectorAll('.Listing');
 let listingTitles = document.querySelectorAll('.Listing-title');
 
+let sortCategory = 'all';
+let sortLocation = 'all';
+
 let sortListings = function(ev) {
   let newValue = ev.target.value;
-  let sortingType = ev.target.getAttribute('data-sorting');
+  let sortType = ev.target.getAttribute('data-sorting');
 
-  if (newValue === 'all') {
-    document.querySelectorAll('.Listing.is-hidden').forEach(function(el) {
-      el.classList.remove('is-hidden');
-    })
-    return;
+  if (sortType == 'location') {
+    sortLocation = newValue;
+  } else {
+    sortCategory = newValue;
   }
 
+
   listings.forEach(function(listing) {
-    if (listing.getAttribute(`data-${sortingType}`) !== newValue) {
-      listing.classList.add('is-hidden');
-    } else {
-      listing.classList.remove('is-hidden');
+
+    listing.classList.add('is-hidden');
+
+    if (listing.getAttribute('data-category') == sortCategory
+        && listing.getAttribute('data-location') == sortLocation
+        || (listing.getAttribute('data-category') == sortCategory && sortLocation == 'all')
+        || (listing.getAttribute('data-location') == sortLocation && sortCategory == 'all')
+        || (sortCategory == 'all' && sortLocation == 'all')
+      ) {
+        listing.classList.remove('is-hidden');
     }
   })
 }
@@ -53,7 +62,6 @@ window.addEventListener('scroll', function() {
   scrollY = window.scrollY;
 
   if (scrollY > sortOffset) {
-    console.log('Out of top');
     sortContainer.classList.add('is-fixed');
   } else {
     sortContainer.classList.remove('is-fixed');

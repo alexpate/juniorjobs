@@ -1,3 +1,12 @@
 .Footer {
   padding: var(--spacing-y) 0;
+  border-top: 1px solid #2d2d42;
+}
+
+.Footer small {
+  font-size: 90%;
+}
+
+.Footer a {
+  color: #aeaed0;
 }

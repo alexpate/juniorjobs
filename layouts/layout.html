@@ -33,7 +33,6 @@
       </a>
     {{/each}}
 
-    {{> Subscribe }}
     {{> Footer }}
 
     <script src="./assets/app.js"></script>
@@ -46,6 +45,23 @@
 
       ga('create', 'UA-93805829-1', 'auto');
       ga('send', 'pageview');
+
+      let listings = document.querySelectorAll('.Listing');
+
+      listings.forEach(function(element) {
+        element.addEventListener('click', (ev) => {
+          let listing = ev.target.closest('.Listing');
+          let lTitle = listing.getAttribute('data-title');
+          let lCategory = listing.getAttribute('data-category');
+          ga('send', 'event', {
+            eventCategory: 'Listing Link',
+            eventAction: 'click',
+            eventLabel: lTitle + ' in ' + lCategory,
+            transport: 'beacon'
+          });
+        }, false);
+      });
+
     </script>
 
   </div>
