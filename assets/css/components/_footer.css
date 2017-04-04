@@ -10,3 +10,7 @@
 .Footer a {
   color: #aeaed0;
 }
+
+.Footer-source {
+  float: right;
+}
