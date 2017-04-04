@@ -4,6 +4,8 @@ s3_bucket: <%= ENV['AWS_S3_PRODUCTION_BUCKET'] %>
 
 s3_endpoint: eu-west-2
 
+site: public/
+
 index_document: index.html
 # error_document: error.html
 
