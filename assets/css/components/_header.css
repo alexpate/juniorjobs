@@ -1,7 +1,6 @@
 .Header {
   width: 100%;
   padding: 60px 0 20px;
-  /*background: url('../img/drop.png') no-repeat right bottom / contain;*/
 }
 
 @media screen and (min-width: 40em) {

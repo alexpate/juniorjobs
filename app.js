@@ -17,6 +17,7 @@ module.exports = {
     'data/*',
     '.github/*',
     'Readme.md',
+    'LICENSE',
     's3_website.yml',
     '**/_*',
     '**/.*',
