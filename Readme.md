@@ -13,5 +13,3 @@ Location: Manchester
 category: design
 url: A link to the application page
 ```
-
-The board is updated daily.
