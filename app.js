@@ -19,7 +19,8 @@ module.exports = {
     'Readme.md',
     's3_website.yml',
     '**/_*',
-    '**/.*'
+    '**/.*',
+    '*.log',
   ],
   reshape: {
     locals: {
