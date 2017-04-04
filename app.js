@@ -10,7 +10,16 @@ const listings = require('./data/listings.json');
 
 module.exports = {
   devtool: 'source-map',
-  ignore: ['**/layout.html', '**/_*', '**/.*'],
+  ignore: [
+    'views/layout.html',
+    'views/partials/*',
+    'data/*',
+    '.github/*',
+    'Readme.md',
+    's3_website.yml',
+    '**/_*',
+    '**/.*'
+  ],
   reshape: {
     locals: {
       defaultTitle: 'JuniorJobs - Entry level jobs in UK tech/design',
