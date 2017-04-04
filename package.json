@@ -7,6 +7,7 @@
   "dependencies": {
     "babel-preset-latest": "^6.14.0",
     "image-webpack-loader": "^2.0.0",
+    "reshape-minify": "^0.1.2",
     "spike-css-standards": "^0.1.0",
     "spike-html-standards": "^0.3.5",
     "webpack": "^1.13.1"

@@ -5,6 +5,7 @@ const include = require('reshape-include');
 const layouts = require('reshape-layouts');
 const content = require('reshape-content');
 const expressions = require('reshape-expressions');
+const minify = require('reshape-minify');
 
 const listings = require('./data/listings.json');
 
@@ -29,11 +30,18 @@ module.exports = {
       layouts(),
       content(),
       include(),
-      expressions()
+      expressions(),
+      minify({
+        minifyJs: false // UglifyJS doesn't support ES6 :/
+      })
     ]
   },
   postcss: (ctx) => {
-    return cssStandards({ parser: false, webpack: ctx })
+    return cssStandards({
+      parser: false,
+      webpack: ctx,
+      minify: true
+    })
   },
   babel: { presets: [latest] }
 };
