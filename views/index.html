@@ -1,7 +1,6 @@
 <extends src="views/layout.html">
   <block name="content">
 
-    <include src="views/partials/ProductHunt.html"></include>
     <include src="views/partials/Sort.html"></include>
 
     <each loop="job in jobs">
@@ -14,6 +13,8 @@
         <span class="Listing-link">Apply now</span>
       </a>
     </each>
+    
+    <include src="views/partials/Callout.html"></include>
 
   </block>
 </extends>
