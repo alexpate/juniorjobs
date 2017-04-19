@@ -5,16 +5,16 @@
   "author": "Alex Pate",
   "bugs": "https://github.com/alexpate/juniorjobs/issues",
   "dependencies": {
-    "babel-preset-latest": "^6.24.0",
+    "babel-preset-env": "^1.3.2",
     "reshape": "^0.4.1",
     "reshape-minify": "^0.1.2",
     "reshape-content": "^0.2.0",
     "reshape-expressions": "^0.1.5",
     "reshape-include": "^0.3.0",
     "reshape-layouts": "^0.2.1",
-    "spike-core": "^0.11.2",
-    "spike-css-standards": "^0.1.3",
-    "webpack": "^1.13.1"
+    "spike-core": "^1.0.0",
+    "spike-css-standards": "^1.0.0",
+    "webpack": "^2.3.3"
   },
   "devDependencies": {},
   "homepage": "https://github.com/alexpate/juniorjobs",

@@ -1,5 +1,5 @@
 const cssStandards = require('spike-css-standards');
-const latest = require('babel-preset-latest');
+const latest = require('babel-preset-env');
 const reshape = require('reshape');
 const include = require('reshape-include');
 const layouts = require('reshape-layouts');
@@ -38,12 +38,9 @@ module.exports = {
       })
     ]
   },
-  postcss: (ctx) => {
-    return cssStandards({
-      parser: false,
-      webpack: ctx,
-      minify: true
-    })
-  },
+  postcss: cssStandards({
+    parser: false,
+    minify: true
+  }),
   babel: { presets: [latest] }
 };
